@@ -1,0 +1,118 @@
+.statute {
+    padding: 60px 40px;
+}
+
+.statute__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.statute__card {
+    border: 1.5px solid #e4e4e4;
+    border-radius: 10px;
+    padding: 30px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statute__card:hover {
+    border-color: #1d4b8f;
+    box-shadow: 0 4px 16px rgba(29, 75, 143, 0.1);
+}
+
+.statute__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d4b8f;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.statute__desc {
+    font-size: 14px;
+    color: #888;
+}
+
+.statute__buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.statute__btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #1d4b8f;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.statute__btn:hover {
+    background-color: #e8651a;
+    color: white;
+}
+
+/* PDF — გლობალური, ყველა გვერდზე გამოიყენება */
+.pdf-toggle-btn {
+    background-color: white;
+    color: #1d4b8f;
+    border: 1.5px solid #1d4b8f;
+    padding: 10px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.pdf-toggle-btn:hover {
+    background-color: #e8651a;
+    border-color: #e8651a;
+    color: white;
+}
+
+.pdf-viewer {
+    margin-top: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1.5px solid #e4e4e4;
+    display: none;
+}
+
+.pdf-viewer.open {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .statute {
+        padding: 40px 20px;
+    }
+
+    .statute__card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .statute__buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .statute__btn,
+    .pdf-toggle-btn {
+        text-align: center;
+        width: 100%;
+    }
+}

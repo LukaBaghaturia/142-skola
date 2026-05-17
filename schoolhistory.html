@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>142 საჯარო სკოლა სკოლის ისტორია</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/schoolhistory.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header__container">
+            <a href="index.html" class="logo__link">
+                <img src="images/logo.jpg" alt="" class="logo__img">
+                <div class="logo__text">
+                    <span class="logo__num">142</span>
+                    <span class="logo__sub">საჯარო სკოლა</span>
+                </div>
+            </a>
+            <!-- logo -->
+            <nav>
+                <ul class="nav__list" id="navList">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav-link">მთავარი</a>
+                    </li>
+                    <li class="nav__item">
+                        <div class="link__row">
+                            <a href="about.html" class="nav-link">სკოლის შესახებ</a>
+                            <button class="arrow-btn" id="arrowBtn1">
+                                <svg class="arrow-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="link-dropdown" id="dropdown1">
+                            <li><a href="missionandvision.html">მისია და ხედვა</a></li>
+                            <li><a href="schoolhistory.html">სკოლის ისტორია</a></li>
+                            <li><a href="statute.html">წესდება</a></li>
+                            <li><a href="bylaws.html">შინაგანაწესი</a></li>
+                            <li><a href="regulatordocument.html">მარეგულირებელი დოკუმენტები</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <div class="link__row">
+                            <a href="#" class="nav-link">სასწავლო პროცესი</a>
+                            <button class="arrow-btn" id="arrowBtn2">
+                                <svg class="arrow-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="link-dropdown" id="dropdown2">
+                            <li><a href="schoolcurriculum.html">სასკოლო სასწავლო გეგმა</a></li>
+                            <li><a href="subjectcurriculum.html">საგნობრივი კურიკულუმები</a></li>
+                            <li><a href="curriculumdevelopmentmethodology.html">კურიკულუმის განვითარების მეთოდოლოგია</a>
+                            </li>
+                            <li><a href="mobility.html">ჩარიცხვის, მობილობის, სტატუსის შეჩერების წ.</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="clubs.html" class="nav-link">წრეები და კლუბები</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav-link">კონტაქტი</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- navigation -->
+            <div class="buttons">
+                <button class="burger-btn" id="burgerBtn">
+                    <svg class="burger-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        </path>
+                    </svg>
+                </button>
+                <button class="close-btn" id="closeBtn">
+                    <svg class="close-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <!-- buttons container -->
+        </div>
+    </header>
+    <!-- header -->
+    <div class="page">
+        <main>
+
+            <div class="intro">
+                <p>142-ე სკოლა გაიხსნა 1971 წელს, თბილისის თემქის დასახლების III მიკრორაიონში. XX საუკუნის 70-იანი
+                    წლებიდან XXI საუკუნის 30-იან წლებამდე სკოლამ სწავლების მაღალი აკადემიური დონით, ტრადიციებითა და
+                    კურსდამთავრებულთა წარმატებებით ღირსეული ადგილი დაიმკვიდრა ქვეყნის განათლების სისტემაში.</p>
+                <p>გახსნიდან დღემდე სკოლას რვა დირექტორი ხელმძღვანელობდა, რომლებმაც ერთგულ პედაგოგიურ კოლექტივთან ერთად
+                    მნიშვნელოვანი წვლილი შეიტანეს სკოლის ინფრასტრუქტურის განვითარებასა და სწავლების ხარისხის ამაღლებაში.
+                </p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">დირექტორთა ქრონიკა</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>პერიოდი</th>
+                            <th>სახელი</th>
+                            <th>შენიშვნა</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="year">1971</td>
+                            <td class="name">თამაზ ტატიშვილი</td>
+                            <td>პირველი დირექტორი</td>
+                        </tr>
+                        <tr>
+                            <td class="year">შემდეგი პერიოდი</td>
+                            <td class="name">კლიმენტი ლოლაძე</td>
+                            <td>დაინიშნა დაწინაურების შემდეგ</td>
+                        </tr>
+                        <tr>
+                            <td class="year">1983</td>
+                            <td class="name">იუზა ჩეჩელაშვილი</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="year">1985</td>
+                            <td class="name">ანდრო თურქია</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="year">შემდეგი პერიოდი</td>
+                            <td class="name">როსტომ ალავიძე</td>
+                            <td>დაინიშნა ა. თურქიას გადასვლის შემდეგ</td>
+                        </tr>
+                        <tr>
+                            <td class="year">1988 — 2011</td>
+                            <td class="name">სოსო ლაგვილავა</td>
+                            <td>არჩეული დირექტორი</td>
+                        </tr>
+                        <tr>
+                            <td class="year">2011 — 2021</td>
+                            <td class="name">შორენა ცნობილაძე</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="year">2021 — დღემდე</td>
+                            <td class="name">ეკატერინე ენდელაძე</td>
+                            <td>მოქმედი დირექტორი</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">ღონისძიებები და პროექტები</div>
+                <ul class="act-list">
+                    <li>
+                        <span class="act-label">შემოქმედებითი კვირეულები</span>
+                        <span>მოსწავლეთა შემოქმედებითი კვირეულები პედაგოგების მონაწილეობით.</span>
+                    </li>
+                    <li>
+                        <span class="act-label">შეხვედრები მწერლებთან</span>
+                        <span>სკოლა მასპინძლობს მწერლებს, მსახიობებს და ცნობილ კურსდამთავრებულებს.</span>
+                    </li>
+                    <li>
+                        <span class="act-label">საზოგადოებრივი სამსახური</span>
+                        <span>მოხუცებთან ვიზიტები, კონცერტები თავშესაფრებში, გაჭირვებულ ოჯახებთან დახმარება.</span>
+                    </li>
+                    <li>
+                        <span class="act-label">ექსკურსია-ლაშქრობები</span>
+                        <span>მუზეუმები, მწერალთა სახლ-მუზეუმები და საქართველოს ისტორიული ღირსშესანიშნაობები.</span>
+                    </li>
+                    <li>
+                        <span class="act-label">„დავითიანი"</span>
+                        <span>საპატრიარქოსთან არსებული შემოქმედებითი პროექტი — გამარჯვებულები ტაო-კლარჯეთს
+                            სტუმრობენ.</span>
+                    </li>
+                    <li>
+                        <span class="act-label">უსინათლოთა სახლი</span>
+                        <span>მოსწავლეები კითხულობენ უსინათლო პოეტთა ლექსებს უსინათლოთა კულტურის სახლში.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="quote">
+                <p>გვჯერა, რომ ჩვენი სკოლა მომავალშიც ღირსეულად გააგრძელებს განვითარებას, შეინარჩუნებს საუკეთესო
+                    ტრადიციებს და არაერთ წარმატებულ, განათლებულ და ღირსეულ თაობას აღუზრდის ქვეყანას.</p>
+            </div>
+
+        </main>
+
+        <aside>
+
+            <div class="side-block orange-top">
+                <div class="section-title">მოქმედი დირექტორი</div>
+                <div class="director-name">ეკატერინე ენდელაძე</div>
+                <div class="director-since">2021 — დღემდე</div>
+            </div>
+
+            <div class="side-block">
+                <div class="section-title">სკოლა რიცხვებში</div>
+                <div class="side-row">
+                    <span class="side-row-label">დაარსების წელი</span>
+                    <span class="side-row-val">1971</span>
+                </div>
+                <div class="side-row">
+                    <span class="side-row-label">იუბილე</span>
+                    <span class="side-row-val">55 წელი</span>
+                </div>
+                <div class="side-row">
+                    <span class="side-row-label">დირექტორები</span>
+                    <span class="side-row-val">8</span>
+                </div>
+            </div>
+
+            <div class="side-block">
+                <div class="section-title">ადგილმდებარეობა</div>
+                <p class="side-text">თბილისი, თემქის დასახლება,<br>III მიკრორაიონი, II კვარტალი</p>
+            </div>
+
+            <div class="side-block">
+                <div class="section-title">ღირებულებები</div>
+                <p class="side-text">ერთობა, პროფესიონალიზმი, ტრადიციების პატივისცემა და სიახლეებისადმი სწრაფვა.</p>
+            </div>
+
+        </aside>
+    </div>
+    <!-- main -->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__row">
+                <h3>კონტაქტი</h3>
+                <div>
+                    <a href="tel:+995322612880">0322 647 011</a>
+                    <a href="mailto:tbilisi142@mes.gov.ge">tbilisi142@mes.gov.ge</a>
+                </div>
+            </div>
+            <div class="footer__row">
+                <h3>მისამართი</h3>
+                <p>გლდანი-ნაძალადევი, თემქის მე-3 მ/რ, მე-2 კვ.</p>
+            </div>
+            <div class="footer__row">
+                <h3>სოციალური ქსელები</h3>
+                <a href="https://www.facebook.com/profile.php?id=100064833875062" target="_blank">facebook</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

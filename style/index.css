@@ -1,0 +1,309 @@
+.slider {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__track {
+    position: absolute;
+    inset: 0;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(143, 75, 29, 0.226) 0%,
+            rgba(47, 88, 163, 0.329) 100%);
+    z-index: 1;
+}
+
+.slider__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 0 24px;
+    max-width: 760px;
+}
+
+.hero-title {
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hero-title span {
+    color: #f9a86c;
+}
+
+.hero-subtitle {
+    font-size: clamp(14px, 2.2vw, 18px);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.88;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #e8661a4b;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    backdrop-filter: blur(4px);
+    transition: background-color 0.25s ease;
+}
+
+.slider__arrow:hover {
+    background-color: #1d4b8f60;
+}
+
+.slider__arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+.slider__arrow--left {
+    left: 20px;
+}
+
+.slider__arrow--right {
+    right: 20px;
+}
+
+/* წერტილები */
+.slider__dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.slider__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.slider__dot.active {
+    background-color: white;
+    transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+    .slider__arrow:hover {
+        background-color: #e8661a4b;
+    }
+
+    .slider__arrow {
+        width: 36px;
+        height: 36px;
+    }
+}
+.posts {
+    padding: 60px 40px;
+}
+
+.posts__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.posts__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d4b8f;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e4e4e4;
+}
+
+.posts__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ბარათი */
+.post-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    border-bottom: 1.5px solid #e4e4e4;
+    padding-bottom: 40px;
+}
+
+.post-card:last-child {
+    border-bottom: none;
+}
+
+/* ლუწი ბარათი — სურათი მარჯვნივ */
+.post-card:nth-child(even) {
+    direction: rtl;
+}
+
+.post-card:nth-child(even) > * {
+    direction: ltr;
+}
+
+/* სლაიდერი */
+.post-card__slider {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background-color: #f0f4f8;
+}
+
+.post-card__slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.post-card__slide.active {
+    opacity: 1;
+}
+
+.post-card__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ისრები */
+.post-card__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #1d4b8f;
+    transition: background-color 0.25s ease;
+}
+
+
+.post-card__arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.post-card__arrow--left {
+    left: 10px;
+}
+
+.post-card__arrow--right {
+    right: 10px;
+}
+
+/* წერტილები */
+.post-card__dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+.post-card__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.post-card__dot.active {
+    background-color: white;
+    transform: scale(1.3);
+}
+
+/* ტექსტი */
+.post-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post-card__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d4b8f;
+    line-height: 1.4;
+}
+
+.post-card__text {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .posts {
+        padding: 40px 20px;
+    }
+
+    .post-card {
+        grid-template-columns: 1fr;
+        direction: ltr !important;
+    }
+
+    .post-card:nth-child(even) {
+        direction: ltr;
+    }
+}
