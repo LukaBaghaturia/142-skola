@@ -1,0 +1,15 @@
+# Cloudflare Pages configuration for the 142 School site.
+name = "school142"
+pages_build_output_dir = "."
+compatibility_date = "2024-11-01"
+
+# D1 database binding — available in Pages Functions as env.DB
+[[d1_databases]]
+binding = "DB"
+database_name = "school142"
+database_id = "54cf8b50-9949-4205-b858-6103ee0e1511"
+
+# NOTE: secrets are NOT stored here. Set them in the Cloudflare dashboard
+# (Pages project -> Settings -> Variables and Secrets):
+#   ADMIN_PASSWORD  — the admin panel password
+#   SESSION_SECRET  — a long random string used to sign login sessions

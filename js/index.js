@@ -1,3 +1,6 @@
+/* მთავარი გვერდი — ჰერო-სლაიდერი + სიახლეები (API-დან) */
+
+/* ---------- ჰერო-სლაიდერი ---------- */
 const slides = document.querySelectorAll('.slide');
 const dotsContainer = document.getElementById('sliderDots');
 const prevBtn = document.getElementById('prevBtn');
@@ -34,58 +37,7 @@ nextBtn.addEventListener('click', () => goTo(current + 1));
 
 resetTimer();
 
-const posts = [
-    {
-        title: 'მგალობელთა გუნდი სამების საკათედრო ტაძარში',
-        text: '',
-        images: [
-            'images/mainpostsimages/videopost/video1.mp4' 
-        ]
-    },
-    {
-        title: 'ერთი დღე საზოგადოებრივი უსაფრთხოების მართვის ცენტრში',
-        text: 'ქ.თბილისის 142-ე საჯარო სკოლის 9/გ კლასი ეწვია საზოგადოებრივი უსაფრთხოების მართვის ცენტრს — PUBLIC SAFETY COMMAND CENTER (WWW.112.GE). მოსწავლეებმა გაეცნენ ცენტრის საქმიანობას და მიიღეს ღირებული გამოცდილება.',
-        images: [
-            'images/mainpostsimages/post1/1.jpg',
-            'images/mainpostsimages/post1/2.jpg',
-            'images/mainpostsimages/post1/3.jpg',
-            'images/mainpostsimages/post1/4.jpg',
-            'images/mainpostsimages/post1/5.jpg',
-        ]
-    },
-    {
-        title: 'წარმატებით დასრულდა პროექტი — „ზამთრის სკოლა: ჯანსაღი ცხოვრება და ემპათია"',
-        text: 'ჩვენი სკოლის V ბ კლასში გაიმართა საინტერესო, მრავალფეროვანი და შთამბეჭდავი პროექტის — „ზამთრის სკოლის" დახურვის ღონისძიება. პროექტის ფარგლებში აქტიურად იყო ჩართული ყველა საგნობრივი მიმართულება. პროექტს ხელმძღვანელობდა ეკატერინე ტაბატაძე. მეცადინეობებს უძღვებოდნენ: ქართული — ლილიანა გვიჩია, ისტორია — შორენა ხოტივრიშვილი, მათემატიკა — ლელა გოგობერიძე, რუსული — ქეთევან ჩიტაშვილი, ინგლისური — ეკატერინე ტაბატაძე, ხელოვნება — თაზო ლაპიაშვილი, მუსიკა — თეა არზიანი. მოსწავლეებმა დიდი პასუხისმგებლობითა და ემოციით ისაუბრეს პროექტში მიღებულ გამოცდილებაზე. გამარჯვებულები დაჯილდოვდნენ სულაკაურის გამომცემლობის მიერ საინტერესო წიგნებით. „ზამთრის სკოლა" იქცა ახალი ცოდნის, მეგობრობის, შემოქმედების, პასუხისმგებლობისა და წარმატების სივრცედ.',
-        images: [
-            'images/mainpostsimages/posti2/1.jpg',
-            'images/mainpostsimages/posti2/2.jpg',
-            'images/mainpostsimages/posti2/3.jpg',
-            'images/mainpostsimages/posti2/4.jpg',
-            'images/mainpostsimages/posti2/5.jpg',
-        ]
-    },
-    {
-        title: 'პერსონაჟის დღის ღონისძიება',
-        text: 'პერსონაჟის დღის ღონისძიებასთან დაკავშირებით ქართული ენისა და ლიტერატურის მასწავლებლის, მაკა ფარეიშვილის მოსწავლეებმა: 5გ (მერი შავლუხაშვილი), 6ბ (ქეთი ჩიტაშვილი), 9ე (მარი გიგოლაშვილი), 10დ (მაკა ფარეიშვილი) დახატეს გმირები, შექმნეს საპრეზენტაციო ტექსტები და გააკეთეს კედლის გაზეთები. ნამუშევრების გამოფენა მოეწყო სკოლის სააქტო დარბაზში. მოსწავლეებმა შეძლეს ცოდნის თვალსაწიერის გაღრმავება. პატივისცემით მაკა ფარეიშვილი.',
-        images: [
-            'images/mainpostsimages/posti3/1.jpg',
-            'images/mainpostsimages/posti3/2.jpg',
-            'images/mainpostsimages/posti3/3.jpg',
-            'images/mainpostsimages/posti3/4.jpg',
-        ]
-    },
-    {
-        title: '142-ე სასკოლო სპორტული ოლიმპიადა – „მინი ფეხბურთი"',
-        text: '142-ე და 207-ე საჯარო სკოლებს შორის გამართული მატჩი დასრულდა 3:1, ჩვენი სკოლის სასარგებლოდ! თბილისის საქალაქო თამაშების მინი ფეხბურთის შესარჩევი ეტაპი — დღე VI. მადლობა თითოეულ მონაწილესა და გულშემატკივარს თავდადებისთვის! ჩვენ ერთად ვსწავლობთ გამარჯვებას! მხარდამჭერები: საქართველოს სპორტის სამინისტრო, საქართველოს განათლების, მეცნიერებისა და ახალგაზრდობის სამინისტრო, საქართველოს ეროვნული ოლიმპიური კომიტეტი.',
-        images: [
-            'images/mainpostsimages/posti4/1.jpg',
-            'images/mainpostsimages/posti4/2.jpg',
-            'images/mainpostsimages/posti4/3.jpg',
-            'images/mainpostsimages/posti4/4.jpg',
-        ]
-    },
-];
-
+/* ---------- სიახლეები ---------- */
 function isVideo(src) {
     return /\.(mp4|webm|ogg)$/i.test(src);
 }
@@ -99,19 +51,33 @@ function createMediaElement(src, alt) {
 
 const grid = document.getElementById('postsGrid');
 
-posts.forEach(post => {
+fetch('/api/news')
+    .then((r) => r.json())
+    .then((posts) => {
+        if (!Array.isArray(posts) || !posts.length) {
+            grid.innerHTML = '<p style="color:#888">სიახლეები ჯერ არ არის.</p>';
+            return;
+        }
+        posts.forEach(renderPost);
+    })
+    .catch(() => {
+        grid.innerHTML = '<p style="color:#888">სიახლეების ჩატვირთვა ვერ მოხერხდა.</p>';
+    });
+
+function renderPost(post) {
+    const images = Array.isArray(post.media) ? post.media : [];
     const card = document.createElement('div');
     card.classList.add('post-card');
 
     const sliderHTML = `
         <div class="post-card__slider">
-            ${post.images.map((src, i) => `
+            ${images.map((src, i) => `
                 <div class="post-card__slide ${i === 0 ? 'active' : ''}">
                     ${createMediaElement(src, post.title)}
                 </div>
             `).join('')}
 
-            ${post.images.length > 1 ? `
+            ${images.length > 1 ? `
                 <button class="post-card__arrow post-card__arrow--left">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2929 12L15.6464 7.64645C16.037 7.25592 16.037 6.62276 15.6464 6.23223C15.2559 5.84171 14.6228 5.84171 14.2322 6.23223L9.23223 11.2322C8.84171 11.6228 8.84171 12.2559 9.23223 12.6464L14.2322 17.6464C14.6228 18.037 15.2559 18.037 15.6464 17.6464C16.037 17.2559 16.037 16.6228 15.6464 16.2322L11.2929 12Z" fill="currentColor"/>
@@ -123,7 +89,7 @@ posts.forEach(post => {
                     </svg>
                 </button>
                 <div class="post-card__dots">
-                    ${post.images.map((_, i) => `
+                    ${images.map((_, i) => `
                         <button class="post-card__dot ${i === 0 ? 'active' : ''}"></button>
                     `).join('')}
                 </div>
@@ -133,34 +99,34 @@ posts.forEach(post => {
 
     const contentHTML = `
         <div class="post-card__content">
-            <h3 class="post-card__title">${post.title}</h3>
-            <p class="post-card__text">${post.text}</p>
+            <h3 class="post-card__title">${post.title || ''}</h3>
+            <p class="post-card__text">${post.body || ''}</p>
         </div>
     `;
 
     card.innerHTML = sliderHTML + contentHTML;
     grid.appendChild(card);
 
-    if (post.images.length > 1) {
-        const slides = card.querySelectorAll('.post-card__slide');
-        const dots = card.querySelectorAll('.post-card__dot');
-        const prevBtn = card.querySelector('.post-card__arrow--left');
-        const nextBtn = card.querySelector('.post-card__arrow--right');
-        let current = 0;
+    if (images.length > 1) {
+        const slideEls = card.querySelectorAll('.post-card__slide');
+        const dotEls = card.querySelectorAll('.post-card__dot');
+        const prev = card.querySelector('.post-card__arrow--left');
+        const next = card.querySelector('.post-card__arrow--right');
+        let cur = 0;
 
-        function goTo(index) {
-            const currentVideo = slides[current].querySelector('video');
+        function go(index) {
+            const currentVideo = slideEls[cur].querySelector('video');
             if (currentVideo) currentVideo.pause();
 
-            slides[current].classList.remove('active');
-            dots[current].classList.remove('active');
-            current = (index + slides.length) % slides.length;
-            slides[current].classList.add('active');
-            dots[current].classList.add('active');
+            slideEls[cur].classList.remove('active');
+            dotEls[cur].classList.remove('active');
+            cur = (index + slideEls.length) % slideEls.length;
+            slideEls[cur].classList.add('active');
+            dotEls[cur].classList.add('active');
         }
 
-        prevBtn.addEventListener('click', () => goTo(current - 1));
-        nextBtn.addEventListener('click', () => goTo(current + 1));
-        dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+        prev.addEventListener('click', () => go(cur - 1));
+        next.addEventListener('click', () => go(cur + 1));
+        dotEls.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
     }
-});
+}
