@@ -13,7 +13,7 @@ const curriculums = [
     },
     {
         name: 'საბაზო საფეხურის კურიკულუმი',
-       link: 'https://drive.google.com/file/d/1hu1twLuXW5kGJR9TvjQG_SNb-c3aMggZ/viewl',
+        link: 'https://drive.google.com/file/d/1hu1twLuXW5kGJR9TvjQG_SNb-c3aMggZ/view',
     },
     {
         name: 'დაწყებითი საფეხურის კურიკულუმი',
@@ -42,7 +42,7 @@ curriculums.forEach(item => {
     el.innerHTML = `
         <div class="curriculum__item-name">${item.name}</div>
         <div class="curriculum__item-btn">
-            <a href="${item.link} "target="_blank">გახსნა →</a>
+            <a href="${item.link}" target="_blank">გახსნა →</a>
         </div>
     `;
 
