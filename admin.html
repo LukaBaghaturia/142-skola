@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ადმინ პანელი — №142 საჯარო სკოლა</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="stylesheet" href="style/admin.css">
+    <script defer src="js/admin.js"></script>
+</head>
+
+<body>
+    <!-- შესვლის ეკრანი -->
+    <div id="loginView" class="login-view">
+        <form id="loginForm" class="login-box">
+            <img src="images/logo.jpg" alt="" class="login-logo">
+            <h1>ადმინ პანელი</h1>
+            <p class="login-sub">№142 საჯარო სკოლა</p>
+            <input type="password" id="passwordInput" placeholder="პაროლი" autocomplete="current-password"
+                required>
+            <button type="submit" id="loginBtn">შესვლა</button>
+            <div id="loginError" class="form-error"></div>
+        </form>
+    </div>
+
+    <!-- პანელი -->
+    <div id="dashView" class="dash-view" hidden>
+        <header class="dash-header">
+            <div class="dash-brand">
+                <img src="images/logo.jpg" alt="">
+                <span>ადმინ პანელი</span>
+            </div>
+            <div class="dash-header-right">
+                <a href="index.html" target="_blank" class="dash-link">საიტის ნახვა ↗</a>
+                <button id="logoutBtn">გასვლა</button>
+            </div>
+        </header>
+
+        <nav class="dash-tabs">
+            <button class="tab-btn active" data-tab="news">სიახლეები</button>
+            <button class="tab-btn" data-tab="clubs">წრეები და კლუბები</button>
+            <button class="tab-btn" data-tab="documents">დოკუმენტები</button>
+        </nav>
+
+        <main class="dash-main">
+            <div class="panel-head">
+                <h2 id="panelTitle">სიახლეები</h2>
+                <button id="addBtn" class="btn-primary">+ ახალი დამატება</button>
+            </div>
+            <div id="statusMsg" class="status-msg" hidden></div>
+            <div id="itemList" class="item-list"></div>
+        </main>
+    </div>
+
+    <!-- მოდალური ფორმა -->
+    <div id="modal" class="modal" hidden>
+        <div class="modal-box">
+            <div class="modal-head">
+                <h3 id="modalTitle">ახალი ჩანაწერი</h3>
+                <button id="modalClose" type="button" aria-label="დახურვა">&times;</button>
+            </div>
+            <form id="itemForm" class="item-form"></form>
+        </div>
+    </div>
+</body>
+
+</html>
