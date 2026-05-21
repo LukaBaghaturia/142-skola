@@ -149,6 +149,8 @@ function createClubCard(club) {
             <div class="club-card__mission">${club.mission}</div>
             <div class="club-card__consultant">${club.consultant}</div>
             <div class="club-card__btn">
+
+
                 <a href="${club.link}" target="_blank">სრული ინფორმაცია →</a>
             </div>
         </div>
@@ -160,7 +162,18 @@ clubs.forEach(club => {
     clubsContainer.appendChild(createClubCard(club));
 });
 
+
 const main = document.querySelector('main');
+
+// "კლუბები" — მთლიანად ზემოთ არსებული .clubs ბლოკის სათაური
+const clubsSectionTitle = document.createElement('h2');
+clubsSectionTitle.classList.add('section-title');
+clubsSectionTitle.textContent = 'კლუბები';
+
+const clubsSection = document.querySelector('.clubs');
+if (clubsSection) {
+    clubsSection.prepend(clubsSectionTitle);
+}
 
 const wreebiSection = document.createElement('section');
 wreebiSection.classList.add('wreebi');
@@ -171,6 +184,7 @@ wreebiSection.innerHTML = `
 `;
 
 main.appendChild(wreebiSection);
+
 
 const wreebiContainer = wreebiSection.querySelector('.wreebi__container');
 
