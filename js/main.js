@@ -1,18 +1,3 @@
-/* Google Analytics (gtag.js) — loaded once here so it applies to every page */
-(function () {
-    const GA_ID = 'G-RBL8TP1Z8X';
-    const gaScript = document.createElement('script');
-    gaScript.async = true;
-    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(gaScript);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', GA_ID);
-})();
-
 let burgerBtn = document.getElementById('burgerBtn');
 let closeBtn = document.getElementById('closeBtn');
 let navList = document.getElementById('navList');
