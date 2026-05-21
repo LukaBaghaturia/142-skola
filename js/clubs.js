@@ -3,7 +3,7 @@ const clubs = [
         name: 'ბუნების მცველი',
         motto: '"დაიცავი ბუნება დღეს, რომ გქონდეს ხვალ"',
         mission: 'ეკო-კლუბი "ბუნების მცველი" აერთიანებს მოტივირებულ ახალგაზრდებს, რომლებიც ზრუნავენ გარემოზე და ავითარებენ ეკოლოგიურ ცნობიერებას.',
-        consultant: 'კონსულტანტი: სოფიკო ვეკუა',
+        consultant: 'კონსულტან��ი: სოფიკო ვეკუა',
         link: 'https://drive.google.com/file/d/1LUgPKRJhEg2LX-4o8x6jz5pT6-IrVGUq/view',
         image: 'images/clubs/bunebismcveli.jpg'
     },
@@ -26,7 +26,7 @@ const clubs = [
     {
         name: 'მათემატიკის კლუბი "ალბიონი"',
         motto: '"მათემატიკა — ყველგანაა"',
-        mission: 'IV კლასის მათემატიკის კლუბი აერთიანებს მოსწავლეებს, რომლებსაც უყვართ მათემატიკა. ლოგიკური თამაშები, ვიქტორინები და ამოცანები — კვირაში ერთხელ.',
+        mission: 'IV კლასის მათემატიკის კლუბი აერთიანებს მოსწავლეებს, რომლებსაც უყვ��რთ მათემატიკა. ლოგიკური თამაშები, ვიქტორინები და ამოცანები — კვირაში ერთხელ.',
         consultant: 'კონსულტანტი: —',
         link: 'https://drive.google.com/file/d/1AAc4gvALGPPZ_9goI_JooNYBCZCDrEPa/view',
         image: ''
@@ -49,7 +49,7 @@ const clubs = [
     },
     {
         name: 'მშობელთა კლუბი',
-        motto: '"ერთად — შვილების მომავლისთვის"',
+        motto: '"��რთად — შვილების მომავლისთვის"',
         mission: 'მშობელთა კლუბი აერთიანებს მოსწავლეთა მშობლებს სასკოლო ცხოვრებაში აქტიური მონაწილეობისთვის — კვირეულები, გამოფენები და საქველმოქმედო ღონისძიებები.',
         consultant: 'კოორდინატორი: —',
         link: 'https://drive.google.com/file/d/17kMlqal6L3mMe9gWhDp6HlrL7qp9nR7l/view',
@@ -65,15 +65,82 @@ const clubs = [
     },
 ];
 
-const container = document.querySelector('.clubs__container');
+const wreebi = [
+    {
+        name: 'ქორეოგრაფიული ანსამბლი "ლომისი"',
+        category: 'ცეკვა',
+        description: 'ქართული ტრადიციული ცეკვის ანსამბლი, რომელიც ამდიდრებს მოსწავლეებს ეროვნული კულტურით და სცენური გამოცდილებით.',
+        consultant: 'ხელმძღვანელი: —',
+        link: 'https://www.facebook.com/LomisiEnsemble',
+        image: 'images/clubs/wreebi/ქორეოგრაფიული ანსამბლი ლომისი.png'
+    },
+    {
+        name: 'მხატვრული ტანვარჯიში',
+        category: 'სპორტი',
+        description: 'მხატვრული ტანვარჯიშის წრე ავითარებს სხეულის მოქნილობას, პლასტიკას, რიტმის გრძნობას და სცენურ გამოხატვას.',
+        consultant: 'ხელმძღვანელი: —',
+        link: '',
+        image: 'images/clubs/wreebi/მხატვრული-ტანვარჯიში.png'
+    },
+    {
+        name: 'კალათბურთი',
+        category: 'სპორტი',
+        description: 'კალათბურთის წრე ავითარებს გუნდური თამაშის, სტრატეგიული აზროვნებისა და ფიზიკური გამძლეობის უნარებს.',
+        consultant: 'ხელმძღვანელი: —',
+        link: '',
+        image: 'images/clubs/wreebi/კალადბურთი.png'
+    },
+    {
+        name: 'ხელოვნების სტუდია — ნანა ზარქუა',
+        category: 'ხელოვნება',
+        description: 'ნანა ზარქუას ხელოვნების სტუდია ავითარებს მოსწავლეებში შემოქმედებით უნარებს, ფერწერისა და სახვითი ხელოვნების სხვადასხვა ტექნ��კის გამოყენებით.',
+        consultant: 'პედაგოგი: ნანა ზარქუა',
+        link: '',
+        image: 'images/clubs/wreebi/ხელოვნების სტუდია  ნანა ზარქუას ხელოვნების სტუდია.png'
+    },
+    {
+        name: 'ჭადრაკი',
+        category: 'ინტელექტი',
+        description: 'ჭადრაკის წრე ავითარებს ლოგიკურ, სტრატეგიულ და ანალიტიკურ აზროვნებას, ასევე კონცენტრაციასა და მოთმინებას.',
+        consultant: 'ხელმძღვანელი: —',
+        link: '',
+        image: 'images/clubs/wreebi/ჭადრაკი.png'
+    },
+    {
+        name: 'ვოკალი',
+        category: 'მუსიკა',
+        description: 'ვოკალის წრე ავითარებს მოსწავლეებში სიმღერის ტექნიკას, სახმო შესაძლებლობებს, მუსიკალობასა და სცენურ თავდაჯერებულობას.',
+        consultant: 'ხელმძღვანელი: —',
+        link: '',
+        image: 'images/clubs/wreebi/ვოკალი.png'
+    },
+    {
+        name: 'ხატვა',
+        category: 'ხელოვნება',
+        description: 'ხატვის წრე ეხმარება მოსწავლეებს სახვითი ხელოვნების საფუძვლების ათვისებაში — ნახაზი, ფერი, კომპოზიცია და შემოქმედებითი თვითგამოხატვა.',
+        consultant: 'ხელმძღვანელი: —',
+        link: '',
+        image: 'images/clubs/wreebi/ხატვა.png'
+    },
+    {
+        name: 'გიტარა',
+        category: 'მუსიკა',
+        description: 'გიტარის წრე სწავლობს გიტარის დაკვრის საფუძვლებს — აკორდები, მელოდიები და მუსიკალური ნოტაცია სხვადასხვა სტილში.',
+        consultant: 'ხელმძღვანელი: —',
+        link: '',
+        image: 'images/clubs/wreebi/გიტარა.png'
+    },
+];
 
-clubs.forEach(club => {
+const clubsContainer = document.querySelector('.clubs__container');
+
+function createClubCard(club) {
     const card = document.createElement('div');
     card.classList.add('club-card');
 
     card.innerHTML = `
         ${club.image
-            ? `<img src="${club.image}" alt="${club.name}" class="club-card__img">`
+            ? `<div class="club-card__img-wrap"><img src="${club.image}" alt="${club.name}" class="club-card__img"></div>`
             : `<div class="club-card__img--placeholder">ფოტო</div>`
         }
         <div class="club-card__body">
@@ -87,5 +154,53 @@ clubs.forEach(club => {
         </div>
     `;
 
-    container.appendChild(card);
+    return card;
+}
+clubs.forEach(club => {
+    clubsContainer.appendChild(createClubCard(club));
+});
+
+const main = document.querySelector('main');
+
+const wreebiSection = document.createElement('section');
+wreebiSection.classList.add('wreebi');
+
+wreebiSection.innerHTML = `
+    <h2 class="section-title">წრეები</h2>
+    <div class="wreebi__container"></div>
+`;
+
+main.appendChild(wreebiSection);
+
+const wreebiContainer = wreebiSection.querySelector('.wreebi__container');
+
+function createWreebaCard(wreeba) {
+    const card = document.createElement('div');
+    card.classList.add('wreeba-card');
+
+    const categoryBadge = `<span class="wreeba-card__category" data-category="${wreeba.category}">${wreeba.category}</span>`;
+
+    const linkBtn = wreeba.link
+        ? `<div class="club-card__btn"><a href="${wreeba.link}" target="_blank">მეტი ინფორმაცია →</a></div>`
+        : '';
+
+    card.innerHTML = `
+        ${wreeba.image
+            ? `<div class="club-card__img-wrap"><img src="${wreeba.image}" alt="${wreeba.name}" class="club-card__img"></div>`
+            : `<div class="club-card__img--placeholder">ფოტო</div>`
+        }
+        <div class="club-card__body">
+            ${categoryBadge}
+            <div class="club-card__name">${wreeba.name}</div>
+            <div class="club-card__mission">${wreeba.description}</div>
+            <div class="club-card__consultant">${wreeba.consultant}</div>
+            ${linkBtn}
+        </div>
+    `;
+
+    return card;
+}
+
+wreebi.forEach(wreeba => {
+    wreebiContainer.appendChild(createWreebaCard(wreeba));
 });

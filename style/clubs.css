@@ -1,67 +1,107 @@
+/* =============================================
+   SITE HERO — მთავარი ბანერი
+   ============================================= */
+
 .site-hero {
-  position: relative;
-  width: 100%;
-  height: 420px;
-  background-image: url('../images/main-bacground.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: -1;
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background-image: url('../images/main-bacground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
 }
+
+/* მუქი ოვერლეი ბანერის ზედა ნაწილი */
+.site-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(29, 75, 143, 0.55) 0%,
+            rgba(0, 0, 0, 0.45) 100%);
+}
+
 .hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: white;
-  padding: 0 24px;
-  max-width: 760px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 0 24px;
+    max-width: 760px;
 }
 
 .hero-title {
-  font-size: clamp(28px, 5vw, 52px);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  margin-bottom: 14px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
+/* ნომერი სათაურში — ნარინჯისფერი */
 .hero-title span {
-  color: #f9a86c; /* orange accent */
+    color: #f9a86c;
 }
 
 .hero-subtitle {
-  font-size: clamp(14px, 2.2vw, 18px);
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  opacity: 0.88;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.3);
-}
-.site-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(29, 75, 143, 0.55) 0%,
-    rgba(0, 0, 0, 0.45) 100%
-  );
+    font-size: clamp(14px, 2.2vw, 18px);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.88;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* მობილურზე ბანერი პატარაა */
 @media (max-width: 600px) {
-  .site-hero {
-    height: 280px;
-  }
+    .site-hero {
+        height: 280px;
+    }
 }
+
+
+/* =============================================
+   SECTION TITLE — სექციის სათაური (კლუბები / წრეები)
+   გამოიყენება ორივე სექციაში: .clubs და .wreebi
+   ============================================= */
+
+.section-title {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    color: #1d4b8f;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* სათაურის ქვეშ ნარინჯისფერი ხაზი */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #e8651a;
+    border-radius: 2px;
+    margin: 12px auto 0;
+}
+
+
+/* =============================================
+   CLUBS SECTION — კლუბების სექცია
+   ============================================= */
+
 .clubs {
     padding: 60px 40px;
 }
 
+/* გრიდ — ავტომატურად ადაპტირდება ეკრანის სიგანეზე */
 .clubs__container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -70,33 +110,75 @@
     margin: 0 auto;
 }
 
-.club-card {
+/* კლუბების სათაური — "კლუბები" სექციაში */
+/* თუ HTML-ში .clubs-ში სათაური არ გაქვს, შეგიძლია clubs.js-ში დაამატო
+   იგივე section-title კლასი */
+
+
+/* =============================================
+   WREEBI SECTION — წრეების სექცია
+   ============================================= */
+
+/* ფონი ოდნავ განსხვავდება კლუბებისგან — მსუბუქი ნაცრისფერი */
+.wreebi {
+    padding: 60px 40px;
+    background-color: #f7f9fc;
+}
+
+/* გრიდი — იგივე სტრუქტურა, რაც კლუბებს */
+.wreebi__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =============================================
+   CLUB CARD — ბარათი (გამოიყენება ორივეში)
+   ============================================= */
+
+.club-card,
+.wreeba-card {
     border: 1.5px solid #e4e4e4;
     border-radius: 12px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    background-color: #ffffff;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.club-card:hover {
+/* hover ეფექტი */
+.club-card:hover,
+.wreeba-card:hover {
     border-color: #1d4b8f;
     box-shadow: 0 4px 20px rgba(29, 75, 143, 0.1);
 }
 
-.club-card__img {
+.club-card__img-wrap {
     width: 100%;
-    height: 200px;
-    object-fit: contain;
-    background-color: #f0f4f8;
-    display: block;
-    background-color: white;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    overflow: hidden;
 }
 
+.club-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* placeholder — როდესაც ფოტო არ არის */
 .club-card__img--placeholder {
     width: 100%;
     height: 200px;
-    background-color: #f0f4f8;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,20 +186,24 @@
     font-size: 14px;
 }
 
+/* ბარათის ტექსტის ნაწილი */
 .club-card__body {
     padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     flex: 1;
+    /* flex: 1 — ამის გამო ყველა ბარათი ერთი სიმაღლისაა ვერტიკალურ გრიდში */
 }
 
+/* სახელი */
 .club-card__name {
     font-size: 18px;
     font-weight: 700;
     color: #1d4b8f;
 }
 
+/* დევიზი — კლუბებისთვის */
 .club-card__motto {
     font-size: 13px;
     color: #e8651a;
@@ -125,22 +211,26 @@
     font-style: italic;
 }
 
+/* მისია / აღწერა */
 .club-card__mission {
     font-size: 14px;
     color: #444;
     line-height: 1.6;
 }
 
+/* კონსულტანტი */
 .club-card__consultant {
     font-size: 13px;
     color: #888;
 }
 
+/* ღილაკის კონტეინერი — margin-top: auto ამოწევს ღილაკს ბარათის ბოლოში */
 .club-card__btn {
     margin-top: auto;
     padding-top: 16px;
 }
 
+/* ღილაკი */
 .club-card__btn a {
     display: inline-block;
     padding: 10px 20px;
@@ -153,17 +243,82 @@
     transition: background-color 0.25s ease;
 }
 
+/* ღილაკის hover */
 .club-card__btn a:hover {
     background-color: #e8651a;
     color: white;
 }
 
+
+/* =============================================
+   CATEGORY BADGE — კატეგორიის ბეჯი (მხოლოდ წრეებში)
+   data-category ატრიბუტის მიხედვით ფერი იცვლება
+   ============================================= */
+
+.wreeba-card__category {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    align-self: flex-start;
+    /* მარცხნივ გასწორება */
+}
+
+/* სპორტი — მწვანე */
+.wreeba-card__category[data-category="სპორტი"] {
+    background-color: #e6f4ea;
+    color: #2e7d32;
+}
+
+/* მუსიკა — ლურჯი */
+.wreeba-card__category[data-category="მუსიკა"] {
+    background-color: #e3f0fb;
+    color: #1565c0;
+}
+
+/* ცეკვა — იასამნისფერი */
+.wreeba-card__category[data-category="ცეკვა"] {
+    background-color: #f3e5f5;
+    color: #6a1b9a;
+}
+
+/* ხელოვნება — ნარინჯი */
+.wreeba-card__category[data-category="ხელოვნება"] {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+/* ინტელექტი — ოქრო */
+.wreeba-card__category[data-category="ინტელექტი"] {
+    background-color: #fffde7;
+    color: #f57f17;
+}
+
+
+/* =============================================
+   RESPONSIVE — მობილური ადაპტაცია
+   ============================================= */
+
 @media (max-width: 768px) {
+
+    /* კლუბები — ერთი სვეტი */
     .clubs {
         padding: 40px 20px;
     }
 
     .clubs__container {
+        grid-template-columns: 1fr;
+    }
+
+    /* წრეები — ერთი სვეტი */
+    .wreebi {
+        padding: 40px 20px;
+    }
+
+    .wreebi__container {
         grid-template-columns: 1fr;
     }
 }
