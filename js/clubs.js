@@ -71,7 +71,7 @@ const wreebi = [
         category: 'ცეკვა',
         description: 'ქართული ტრადიციული ცეკვის ანსამბლი, რომელიც ამდიდრებს მოსწავლეებს ეროვნული კულტურით და სცენური გამოცდილებით.',
         consultant: 'ხელმძღვანელი: —',
-        link: 'https://www.facebook.com/LomisiEnsemble',
+        link: 'https://drive.google.com/file/d/11QXAMEkWpAQ163h4LHymi7qCGh3-zPBL/view',
         image: 'images/clubs/wreebi/ქორეოგრაფიული ანსამბლი ლომისი.png'
     },
     {
@@ -79,7 +79,7 @@ const wreebi = [
         category: 'სპორტი',
         description: 'მხატვრული ტანვარჯიშის წრე ავითარებს სხეულის მოქნილობას, პლასტიკას, რიტმის გრძნობას და სცენურ გამოხატვას.',
         consultant: 'ხელმძღვანელი: —',
-        link: '',
+        link: 'https://drive.google.com/open?id=1j5eS1hso4v7vpYytPcsUNkv0qxaB5izc&authuser=0',
         image: 'images/clubs/wreebi/მხატვრული-ტანვარჯიში.png'
     },
     {
@@ -87,7 +87,7 @@ const wreebi = [
         category: 'სპორტი',
         description: 'კალათბურთის წრე ავითარებს გუნდური თამაშის, სტრატეგიული აზროვნებისა და ფიზიკური გამძლეობის უნარებს.',
         consultant: 'ხელმძღვანელი: —',
-        link: '',
+        link: 'https://drive.google.com/file/d/1nwDOO8-u5oaqR9quMqtwjiah9en1VGT1/view',
         image: 'images/clubs/wreebi/კალადბურთი.png'
     },
     {
@@ -103,7 +103,7 @@ const wreebi = [
         category: 'ინტელექტი',
         description: 'ჭადრაკის წრე ავითარებს ლოგიკურ, სტრატეგიულ და ანალიტიკურ აზროვნებას, ასევე კონცენტრაციასა და მოთმინებას.',
         consultant: 'ხელმძღვანელი: —',
-        link: '',
+        link: 'https://drive.google.com/open?id=1Ji7v9VBZ3C17HV0tMe5tZtewNOFAZQ0Q&authuser=0',
         image: 'images/clubs/wreebi/ჭადრაკი.png'
     },
     {
@@ -111,7 +111,7 @@ const wreebi = [
         category: 'მუსიკა',
         description: 'ვოკალის წრე ავითარებს მოსწავლეებში სიმღერის ტექნიკას, სახმო შესაძლებლობებს, მუსიკალობასა და სცენურ თავდაჯერებულობას.',
         consultant: 'ხელმძღვანელი: —',
-        link: '',
+        link: 'https://drive.google.com/file/d/1e0laLucMng_uTLQCiBn6vkNyMCh5FZkg/view?usp=drive_open',
         image: 'images/clubs/wreebi/ვოკალი.png'
     },
     {
@@ -119,7 +119,7 @@ const wreebi = [
         category: 'ხელოვნება',
         description: 'ხატვის წრე ეხმარება მოსწავლეებს სახვითი ხელოვნების საფუძვლების ათვისებაში — ნახაზი, ფერი, კომპოზიცია და შემოქმედებითი თვითგამოხატვა.',
         consultant: 'ხელმძღვანელი: —',
-        link: '',
+        link: 'https://drive.google.com/file/d/18sEXPrjMpcWg78A9YV4JHcj193gp1Iyv/view?usp=drive_open',
         image: 'images/clubs/wreebi/ხატვა.png'
     },
     {
