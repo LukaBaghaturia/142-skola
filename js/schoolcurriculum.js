@@ -1,9 +1,5 @@
 const curriculums = [
     {
-        name: 'საშუალო საფეხურის კურიკულუმი (1) (2)',
-        link: 'https://drive.google.com/file/d/1LxT9mUthhZUMwD3JvJYti5eTkb-Goegp/view?usp=drive_open',
-    },
-    {
         name: 'სასკოლო სასწავლო გეგმის შეფასებისა და მისი შემდგომი გაუმჯობესების გეგმა',
         link: 'https://drive.google.com/file/d/10kB9whiffgwsmVGepHfQBn00fzaMXc3U/view',
     },
