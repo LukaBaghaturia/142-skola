@@ -36,6 +36,13 @@ resetTimer();
 
 const posts = [
     {
+        title: 'ილიას ბაღი',
+        text: 'სსიპ ქალაქ თბილისის N142 საჯარო სკოლის პედაგოგიური საზოგადოების, მოსწავლეებისა და მშობლების გადაწყვეტილებით, სკოლის ,,ვარდების ბაღს” 🌹 სრულიად საქართველოს კათოლიკოს-პატრიარქის, ილია მეორის სახელის უკვდავსაყოფად ეწოდა ,,ილიას ბაღი”🌹 ღმერთი გფარავდეთ თითოეულ თქვენთაგანს და სრულიად საქართველოს❤️🙏🏾',
+        images: [
+            'images/mainpostsimages/ილიას ბაღი/ილიას ბაღი1.mp4',
+        ]
+    },
+    {
         title: 'თბილისის N142 სკოლის მოსწავლე და მასწავლებელი ახალგაზრული მოძრაობის შემაჯამებელ ღონისძიებაზე საზეიმოდ დაჯილდოვდნენ',
         text: 'თბილისის N142 საჯარო სკოლის მოსწავლე საბა ჩილინდრიშვილი ახალგაზრდული მოძრაობა „დავითიანნის“ პროექტის გამარჯვებულია. სრული ინფორმაცის სანახავად ეწვიეთ საიტს <a href="https://www.etaloni.ge/geo/main/index/124821" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">etaloni.ge</a>',
         images: [
@@ -139,11 +146,49 @@ function isVideo(src) {
     return /\.(mp4|webm|ogg)$/i.test(src);
 }
 
+// Lightbox
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.innerHTML = `
+    <button class="lightbox__close">&times;</button>
+    <div class="lightbox__content"></div>
+`;
+document.body.appendChild(lightbox);
+
+const lightboxContent = lightbox.querySelector('.lightbox__content');
+const lightboxClose = lightbox.querySelector('.lightbox__close');
+
+function openLightbox(src, isVideoFile) {
+    if (isVideoFile) {
+        lightboxContent.innerHTML = `<video src="${src}" controls autoplay playsinline></video>`;
+    } else {
+        lightboxContent.innerHTML = `<img src="${src}" alt="">`;
+    }
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    const video = lightboxContent.querySelector('video');
+    if (video) video.pause();
+    lightboxContent.innerHTML = '';
+    document.body.style.overflow = '';
+}
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === lightboxClose) closeLightbox();
+});
+lightboxClose.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
 function createMediaElement(src, alt) {
     if (isVideo(src)) {
-        return `<video src="${src}" controls preload="metadata" playsinline style="width:100%;height:100%;object-fit:cover;"></video>`;
+        return `<video src="${src}" controls preload="metadata" playsinline class="post-video"></video>`;
     }
-    return `<img src="${src}" alt="${alt}">`;
+    return `<img src="${src}" alt="${alt}" class="post-image">`;
 }
 
 const grid = document.getElementById('postsGrid');
@@ -189,6 +234,15 @@ posts.forEach(post => {
 
     card.innerHTML = sliderHTML + contentHTML;
     grid.appendChild(card);
+
+    // Lightbox click handlers
+    const mediaContainer = card.querySelector('.post-card__slider');
+    mediaContainer.addEventListener('click', (e) => {
+        const target = e.target.closest('.post-video, .post-image');
+        if (target) {
+            openLightbox(target.src, target.classList.contains('post-video'));
+        }
+    });
 
     if (post.images.length > 1) {
         const slides = card.querySelectorAll('.post-card__slide');
