@@ -36,6 +36,31 @@ resetTimer();
 
 const posts = [
     {
+        title: ' საქართველოს უნივერსიტეტის ოლიმპიადა',
+        text: 'ჩვენი სკოლის წარმატება!  სიხარულითა და სიამაყით გაცნობებთ, რომ ჩვენი სკოლის V-ბ კლასის მოსწავლემ, დემეტრე ქათამაძემ, საქართველოს უნივერსიტეტის მიერ ორგანიზებულ მათემატიკის ოლიმპიადაში წარმატებით იასპარეზა და საპატიო მეორე ადგილი მოიპოვა. ოლიმპიადაში მონაწილეობდნენ V-XII კლასების მოსწავლეები საქართველოს სხვადასხვა რეგიონიდან, რაც დემეტრეს მიღწევას კიდევ უფრო განსაკუთრებულს ხდის. დემეტრემ გამოავლინა მაღალი აკადემიური ცოდნა, ლოგიკური აზროვნება, მიზანდასახულობა და შრომისმოყვარეობა, რის შედეგადაც ღირსეულად წარმოაჩინა საკუთარი თავი და სკოლა. ვულოცავთ დემეტრეს ამ შესანიშნავ წარმატებას, ვუსურვებთ ახალი მწვერვალების დაპყრობასა და მომავალ გამარჯვებებს! გვეამაყები, დემეტრე!',
+        images: [
+            'images/mainpostsimages/საქართველოს უნივერსიტეტის ოლიმპიადა/1.jpg',
+            'images/mainpostsimages/საქართველოს უნივერსიტეტის ოლიმპიადა/2.jpg',
+            'images/mainpostsimages/საქართველოს უნივერსიტეტის ოლიმპიადა/3.jpg',
+        ]
+    },
+    {
+        title: '500- დან 493 ქულა  ',
+        text: '',
+        images: [
+            'images/mainpostsimages/500- დან 493 ქულა/1.jpg',
+            'images/mainpostsimages/500- დან 493 ქულა/2.jpg',
+        ]
+    },
+    {
+        title: 'პირველი ადგილი ძიუდოში',
+        text: 'სინაზემ არ მოგვატყუოს😊💥🦋 I საპრიზო ადგილი ძიუდოში🏆142- ე ❤️',
+        images: [
+            'images/mainpostsimages/judo/1.jpg',
+            'images/mainpostsimages/judo/2.jpg',
+        ]
+    },
+    {
         title: 'გიორგი და სალომე რობაქიძეები ლექსების კრებული',
         text: 'გიორგი და სალომე რობაქიძეები(და- ძმა)💥 დღეს ეს საჩუქარი(ლექსების კრებული), მათი უძვირფასესი დედისაგან მიიღო ჩვენმა სკოლამ❤️ მადლობა და წარმატების უდიდესი სურვილი ნიჭიერ და - ძმას❤️💥🙏🏾',
         images: [
@@ -274,9 +299,31 @@ posts.forEach(post => {
     const mediaContainer = card.querySelector('.post-card__slider');
     mediaContainer.addEventListener('click', (e) => {
         const target = e.target.closest('.post-video, .post-image');
-        if (target) {
-            openLightbox(target.src, target.classList.contains('post-video'));
+        if (!target) return;
+
+        // თუ სლაიდერი არის “მრავლობითი” (რამდენიმე ფოტო/ვიდეო), მაშინ დაკლიკებული სურათი უბრალოდ გააკეთოს გადართვა სლაიდერზე
+        // და არა ლაითბოქსში გახსნა. ეს მოთხოვნამ დაჯერა: "გადიდედბის მერე რომ ვაკლიკებ — სლაიდერი მარტო ერტ ფოტოს ნუ ადიდებ".
+        // უკან დაბრუნება მოთხოვნაზე: მრავალფოტოიან/მრავალმედია სლაიდერზე დაკლიკებისას არ უნდა “ადიდებდეს” ფოტოებს.
+        // ფოტოზე/ვიდეოზე დაჭერა უბრალოდ უნდა გადაგვიყვანოს იმავე სლაიდერზე შესაბამის სლაიდზე.
+        if (post.images.length > 1) {
+            const slides = card.querySelectorAll('.post-card__slide');
+            const idx = Array.from(slides).findIndex(slide => slide.contains(target));
+            if (idx !== -1) {
+                slides.forEach((s, i) => {
+                    s.classList.toggle('active', i === idx);
+                });
+                const dots = card.querySelectorAll('.post-card__dot');
+                dots.forEach((d, i) => {
+                    d.classList.toggle('active', i === idx);
+                });
+                const currentVideo = card.querySelector('.post-card__slide.active video');
+                if (currentVideo) currentVideo.pause();
+            }
+            return;
         }
+
+        // თუ მხოლოდ 1 მედიაა, მაშინ ჩვეულებრივ გააღოს ლაითბოქსში
+        openLightbox(target.src, target.classList.contains('post-video'));
     });
 
     if (post.images.length > 1) {
