@@ -36,6 +36,42 @@ resetTimer();
 
 const posts = [
     {
+        title: ' დაფასება მოტივაციისა და წარმატების საფუძველია!',
+        text: '✨ დაფასება მოტივაციისა და წარმატების საფუძველია!  🤝 ჩვენი სკოლის დირექტორმა, ქალბატონმა ეკატერინე ენდელაძემ, მადლობის სიგელები გადასცა პედაგოგებსა და ტექნიკურ პერსონალს მათი პროფესიონალიზმის, თავდადებული შრომის, პასუხისმგებლობისა და სკოლის განვითარებაში შეტანილი მნიშვნელოვანი წვლილისთვის. 💗👏 💖 გულითადად ვულოცავთ თითოეულ მათგანს ამ დამსახურებულ აღიარებას! გისურვებთ ჯანმრთელობას, წარმატებას, პროფესიულ წინსვლასა და კიდევ მრავალ ღირსეულ მიღწევას! ✨🌹 📌 მადლობის სიგელები გადაეცათ: 🌸 ლეილა საურს 🌸 ეკატერინე ტაბატაძეს 🌸 ლილიანა გვიჩიას 🌸 ნანა მაჩიტიძეს 🌸 ლეილა ჟამიერაშვილს 🌸 ხატია ლომსიანიძეს 🌸 მანანა კავკასიძეს 🌸 სალომე ბუბაშვილს 🌸 ხათუნა სადუნიშვილს 🌸 ხათუნა ირემაძეს 🌸 ნათია გიორგაძეს 🌸 ნატალია დელბაშიშვილს🌸 მარგალიტა ჩადუნელს 🌸 ნანა ზარქუას 🌸 ჟანა გოგინავას 🌸 ნიკოლოზ კორელიდისს 🌸 რევაზ თაბაგარს 🌸 სერგო კარაპეტიანს 🌸ნაზი ინჩქიტიძეს 🌸ნანა სუქიაშვილს',
+        images: [
+            'images/mainpostsimages/დაფასება დამოტივაცია/1.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/2.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/3.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/4.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/5.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/6.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/7.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/8.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/9.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/10.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/11.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/12.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/13.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/14.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/15.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/16.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/17.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/18.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/19.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/20.jpg',
+            'images/mainpostsimages/დაფასება დამოტივაცია/21.jpg',
+
+        ]
+    },
+    {
+        title: 'ჩვენი სკოლის კურსდამთავრებული და ოქროს მედალოსანი ლიზი გელაშვილი',
+        text: '✨🤝🥇ჩვენი სკოლის კურსდამთავრებული და ოქროს მედალოსანი ლიზი გელაშვილი გვიზიარებს ამ შესანიშნავი წარმატებას და გადმოგვცემს საკუთარ ემოციებს:  "სიხარულით გიზიარებთ , რომ ჩავირიცხე Masaryk University-ში, ჩეხეთში, კონკრეტულად სოციალური მეცნიერებების მიმართულებით საერთაშორისო ურთიერთობებისა და ევროპული პოლიტიკის პროგრამაზე❤️🇨🇿 Masaryk University 1919 წელს დაარსებული ერთ-ერთი ყველაზე პრესტიჟული და საერთაშორისო უნივერსიტეტია ჩეხეთში,რომელიც ევროპის მაშტაბით მოწინავე ადგილს იკავებს და გამოირჩევა მაღალი აკადემიური სტანდარტებით, კვლევითი საქმიანობითა და სტუდენტებისთვის მრავალფეროვანი საერთაშორისო შესაძლებლობებით. ამ გზაზე განსაკუთრებული მადლობა მინდა გადავუხადო ჩემს ოჯახის წევრებს მათი უსაზღვრო მხარდაჭერის, რწმენისა და სიყვარულისთვის❤️ ასევე, გულწრფელი მადლობა მარიამს Mariam Tsirgvava ❤️🫂, რომლის დახმარებისა და გვერდში დგომის გარეშე ეს ყოველივე შეუძლებელი იქნებოდა და ჩემს ძვირფას მეგობრებს რომელთა მხარდაჭერა ცხოვრების ყოველ ეტაპზე გამყვება!❤️ მიყვარხართ უსაზღვროდ! 🇨🇿❤️ I’m delighted to share that I have been admitted to Masaryk University in the Czech Republic, where I will be pursuing a Bachelor’s degree in International Relations and European Politics within the Faculty of Social Studies. ❤️🇨🇿 Founded in 1919, Masaryk University is one of the Czech Republic’s leading universities, recognized for its academic excellence, strong research environment, and international community. It is consistently ranked among the country’s top universities and offers outstanding opportunities for students from around the world. A heartfelt thank you to my parents for their endless love, support, and belief in me. I would also like to express my sincere gratitude to all of my friends whose encouragement and help made this journey possible." 🏫ჩვენ კი ჩვენს კურსდამთავრებულს, მიზანდასახულ და ნიჭიერ ლიზის, ვუსურვებთ წარმატებებით, გამარჯვებებითა და ბედნიერი მომენტებით სავსე მომავალს! 💗🎓✨👏 ',
+        images: [
+            'images/mainpostsimages/Masaryk University/1.jpg',
+            'images/mainpostsimages/Masaryk University/2.jpg',
+        ]
+    },
+    {
         title: ' საქართველოს უნივერსიტეტის ოლიმპიადა',
         text: 'ჩვენი სკოლის წარმატება!  სიხარულითა და სიამაყით გაცნობებთ, რომ ჩვენი სკოლის V-ბ კლასის მოსწავლემ, დემეტრე ქათამაძემ, საქართველოს უნივერსიტეტის მიერ ორგანიზებულ მათემატიკის ოლიმპიადაში წარმატებით იასპარეზა და საპატიო მეორე ადგილი მოიპოვა. ოლიმპიადაში მონაწილეობდნენ V-XII კლასების მოსწავლეები საქართველოს სხვადასხვა რეგიონიდან, რაც დემეტრეს მიღწევას კიდევ უფრო განსაკუთრებულს ხდის. დემეტრემ გამოავლინა მაღალი აკადემიური ცოდნა, ლოგიკური აზროვნება, მიზანდასახულობა და შრომისმოყვარეობა, რის შედეგადაც ღირსეულად წარმოაჩინა საკუთარი თავი და სკოლა. ვულოცავთ დემეტრეს ამ შესანიშნავ წარმატებას, ვუსურვებთ ახალი მწვერვალების დაპყრობასა და მომავალ გამარჯვებებს! გვეამაყები, დემეტრე!',
         images: [
@@ -72,15 +108,6 @@ const posts = [
     },
     {
         title: 'საუკეთესო დირექტორს',
-        text: '',
-        images: [
-            'images/mainpostsimages/დიპლომი დირექტორს/1.jpg',
-            'images/mainpostsimages/დიპლომი დირექტორს/2.jpg',
-            'images/mainpostsimages/დიპლომი დირექტორს/3.jpg',
-        ]
-    },
-    {
-        title: 'საჩუქარი საუკეთესო დირექტორს',
         text: '',
         images: [
             'images/mainpostsimages/დიპლომი დირექტორს/1.jpg',
